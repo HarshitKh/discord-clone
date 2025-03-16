@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="login">
+        <h2>Login / Register</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="text" id="nickname" placeholder="Nickname">
+        <input type="text" id="profilePic" placeholder="Profile Picture URL">
+        <button onclick="register()">Enter Chat</button>
+    </div>
+
+    <div id="chat" style="display:none;">
+        <h2>Chat</h2>
+        <select id="groupSelect"></select>
+        <button onclick="joinGroup()">Join Group</button>
+        <ul id="messages"></ul>
+        <input type="text" id="messageInput" placeholder="Type a message">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</body>
+</html>
